@@ -1,6 +1,6 @@
 # XMLSerializer
 
-A lightweight XML serializer in Java using the Reflection API. Converts objects into XML format by inspecting public getter methods. Designed for basic types (`int`, `String`) and null handling — no external libraries required.
+A lightweight XML serializer in Java using the Reflection API. Converts POJOs into XML format by inspecting public getter methods. Designed for basic types (`int`, `String`) and null handling — no external libraries required.
 
 ©2025 Ricki Angel
 ---

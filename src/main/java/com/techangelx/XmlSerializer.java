@@ -67,11 +67,31 @@ public class XmlSerializer {
 
                 if (value == null) {
                     xml.append("<").append(propertyName).append(" xsi:nil=\"true\"/>\n");
-                } else if (value instanceof String || value instanceof Integer) {
+                } else if (value instanceof String) {
                     xml.append("<").append(propertyName).append(">")
                             .append(value)
                             .append("</").append(propertyName).append(">\n");
-                } else {
+                } else if (value instanceof Integer) {
+                    xml.append("<").append(propertyName).append(">")
+                            .append(value)
+                            .append("</").append(propertyName).append(">\n");
+                } else if (value instanceof Double) {
+                    xml.append("<").append(propertyName).append(">")
+                            .append(value)
+                            .append("</").append(propertyName).append(">\n");
+                } else if (value instanceof Boolean) {
+                    xml.append("<").append(propertyName).append(">")
+                            .append(value)
+                            .append("</").append(propertyName).append(">\n");
+                } else if (value instanceof Dog) {
+                    xml.append("<").append(propertyName).append(">")
+                            .append(value)
+                            .append("</").append(propertyName).append(">\n");
+                } else if (value instanceof Long) {
+                    xml.append("<").append(propertyName).append(">")
+                            .append(value)
+                            .append("</").append(propertyName).append(">\n");
+                }else {
                     // Nested object If the value is another object (not a primitive or String), 
                     // this section handles nested objects by calling asXml(value, false). The false means 
                     // that the nested object will not have its own root element. This allows the method to 
